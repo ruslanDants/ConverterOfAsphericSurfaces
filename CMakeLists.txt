@@ -17,8 +17,8 @@ if(Boost_FOUND)
   include_directories(${Boost_INCLUDE_DIRS})
 endif()
 
-file (GLOB_RECURSE SOURCES "*.cpp")
-file (GLOB_RECURSE INCLUDES "*.h")
+file (GLOB_RECURSE SOURCES "src/*.cpp")
+file (GLOB_RECURSE INCLUDES "src/*.h")
 
 qt5_wrap_ui(UIS_HDRS
     mainWindow.ui
