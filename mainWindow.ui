@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>698</width>
+    <height>476</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Пересчет коэффициентов уравнений асферической поверхности</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>97</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>110</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Параметры асферической поверхности</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Радиус кривизны</string>
+           </property>
+           <property name="margin">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Radius">
+           <property name="text">
+            <string>-500</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Эксцентриситет</string>
+           </property>
+           <property name="margin">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Eccentricity">
+           <property name="text">
+            <string>0.58</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Световая высота</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_LightHeight">
+           <property name="text">
+            <string>40</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string>Параметры пересчета</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Исходное уравнение:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_SourceEquation">
+           <item>
+            <property name="text">
+             <string>Полиномиальное</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Международное</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Конечное уравнение:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_ConvertEquation">
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>Полиномиальное</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Международное</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Метод пересчета:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_OLS">
+           <property name="text">
+            <string>Метод наименьших квадратов</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_AnalyticalMethod">
+           <property name="text">
+            <string>Аналитический метод</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_Approximation">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Кол-во точек для аппроксимации</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox_PointsApproximation">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="minimum">
+            <number>30</number>
+           </property>
+           <property name="maximum">
+            <number>5000</number>
+           </property>
+           <property name="value">
+            <number>250</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="4">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>10</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Коэффициенты исходного уравнения:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_SourceCoefficients">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::DotLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>100</number>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>40</number>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>z^3</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>z^4</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>z^5</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>z^6</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0.00001</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0.00005</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>0.0000</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>0.0000</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QPushButton" name="pushButton_AddCoefficient">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_DeleteCoefficient">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_Clear">
+            <property name="text">
+             <string>Очистить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Кол-во коэффициентов на выходе</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_CountOutCoefficients">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="value">
+             <number>2</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1" rowspan="2">
+         <widget class="QPushButton" name="pushButton_Calc">
+          <property name="minimumSize">
+           <size>
+            <width>140</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Пересчитать</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Количесво точек для СКВО:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_PointsStdev">
+            <property name="minimum">
+             <number>50</number>
+            </property>
+            <property name="maximum">
+             <number>5000</number>
+            </property>
+            <property name="value">
+             <number>500</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Результат:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_Result">
+          <property name="minimumSize">
+           <size>
+            <width>370</width>
+            <height>60</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>113</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>698</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Справка по пересчету</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
